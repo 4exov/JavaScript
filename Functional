@@ -1,0 +1,68 @@
+function fibo(n) {
+    if (n <=1) return 1;
+    return fibo(n-1) + fibo(n-2);
+}
+console.log(fibo(5))
+function test() {
+    if (9 ==="9") return true
+    return false;
+}
+console.log(test())
+
+function factorial(n) {
+    if (n === 1) return 1
+    return n * factorial(n-1);
+
+}
+console.log(factorial(5))
+
+function nef(start_num, end_num) {
+    if (end_num - start_num ===2) return [start_num+1]
+    else {
+        var newList = nef(start_num, end_num-1)
+        newList.push(end_num-1);
+        return newList;
+
+    }
+
+}
+console.log(nef(2,9))
+
+function summ(n) {
+    if (n.length === 1) return n[0]
+    else{
+        return n.pop() + summ(n);
+    }
+}
+console.log(summ([1,2,3]))
+
+var my_array = [1,2,3,5,4]
+var my_new_array = my_array.pop()
+console.log(my_new_array)
+
+
+function newSumm(my_array1) {
+    if (my_array1.length===1) return my_array[0]
+    else {
+        return my_array1.pop() + newSumm(my_array1);
+    }
+}
+console.log(newSumm([1,2,3,4,5,6]))
+
+function nPower(number, power) {
+    if (power ===1) return number
+    else {
+        return number * nPower(number, power-1);
+    }
+}
+
+console.log(nPower(5, 5))
+
+function isEven(my_array) {
+    if (my_array.length === 1 && my_array[0] % 2 ===0) return 1
+    else   {
+        return my_array.pop() + isEven(my_array);
+    }
+
+}
+console.log(isEven([1,2,4]))
